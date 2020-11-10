@@ -50,7 +50,7 @@ module.exports = {
     },
     output: {
         filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'docs')
     },
     optimization: optimization(),
     devServer: {
@@ -70,11 +70,11 @@ module.exports = {
             patterns: [
                 {
                     from: path.resolve(__dirname, 'src/favicon.ico'),
-                    to: path.resolve(__dirname, 'dist')
+                    to: path.resolve(__dirname, 'docs')
                 },
                 {
                     from: path.resolve(__dirname, 'src/img/'),
-                    to: path.resolve(__dirname, 'dist/img')
+                    to: path.resolve(__dirname, 'docs/img')
                 }
             ]
         }),
