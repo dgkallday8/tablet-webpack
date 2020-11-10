@@ -1,0 +1,25 @@
+@import 'vars';
+.back {
+  position: absolute;
+  width: $back-btn + 30;
+  height: $back-btn;
+  margin-top: $back-btn + 10;
+  margin-left: $back-btn + 10;
+  display: none;
+  font-size: 15px;
+  cursor: pointer;
+  @media screen and (max-width: 600px){
+    width: $back-btn + 20;
+    height: $back-btn;
+    margin-top: $back-btn - 5;
+    margin-left: $back-btn - 5;
+    font-size: 15px;
+  }
+  @media screen and (max-width: 420px){
+    width: $back-btn + 10;
+    height: $back-btn - 10;
+    margin-top: $back-btn - 10;
+    margin-left: $back-btn - 10;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,59 @@
+@import 'mixsfuncs';
+
+.weather {
+  @include flexAllCenter();
+  @include wh(100%);
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      text-align: center;
+      margin-top: 3%;
+    }
+    input {
+      margin-top: 3%;
+    }
+
+  }
+}
+.temperature {
+  display: flex;
+  align-items: center;
+  @include wh(100%);
+
+  .block {
+    background: $background-display;
+    box-shadow: 0 0 10px 5px lighten($background-display, 10%);
+    @include wh(80%);
+    margin: 0 auto;
+    border-radius: 5%;
+
+    h3 {
+      text-align: center;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+    .weather_img {
+      text-align: center;
+      margin-bottom: 5%;
+
+    }
+    .weather_block {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5%;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    font-size: 13px;
+  }
+  @media screen and (max-width: 420px){
+    font-size: 10px;
+  }
+}

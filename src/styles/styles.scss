@@ -1,0 +1,103 @@
+@import 'partials/vars';
+@import "partials/mixsfuncs";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+body {
+  @include flexAllCenter();
+
+  background: darken($white, 40%);
+  background-size: cover;
+  height: 100vh;
+}
+
+.tablet {
+  position: relative;
+  border: solid 2px lighten($darkgray, 20%);
+  width: $tablet-width;
+  height: $tablet-height;
+  border-radius: 25px;
+  background-color: $black;
+  @media screen and (max-width: 600px){
+    width: $tablet-width-md;
+    height: $tablet-height-md;
+    border-radius: 20px;
+  }
+  @media screen and (max-width: 420px){
+    width: $tablet-width-s;
+    height: $tablet-height-s;
+    border-radius: 15px;
+  }
+
+}
+.display {
+  position: absolute;
+  @include widthHeightLeft($display-width, $display-height);
+  top: 20px;
+  border: solid 1px $darkgray;
+  transition: background-color 1s ease-in-out;
+  @media screen and (max-width: 600px){
+    @include widthHeightLeft($display-width-md, $display-height-md);
+    top: 15px;
+  }
+  @media screen and (max-width: 420px){
+    @include widthHeightLeft($display-width-s, $display-height-s);
+    top: 10px;
+  }
+}
+.off {
+  background: darken($darkgray, 10%);
+}
+.on {
+  background: darken($white, 30%);
+}
+.noscript {
+  @include flexAllCenter();
+  position: absolute;
+  color: $white;
+}
+.btn {
+  @include flexAllCenter();
+  @include widthHeightLeft($btn, $btn);
+  position: absolute;
+  bottom: 20px;
+  background: transparent;
+  border-radius: 50%;
+  outline: none;
+  border: 2px solid #343b3e;
+  cursor: pointer;
+  transition: background-color 1s ease-in-out;
+  &:active {
+    background: #343b3e;
+  }
+  @media screen and (max-width: 600px){
+    @include widthHeightLeft($btn - 10, $btn - 10);
+    bottom: 13px;
+  }
+  @media screen and (max-width: 420px){
+    @include widthHeightLeft($btn - 20, $btn - 20);
+    bottom: 8px;
+  }
+
+}
+
+
+
+
+
+
+@import 'partials/menu';
+@import 'partials/rate';
+@import 'partials/back';
+@import 'partials/weather';
+@import 'partials/settings';
+
+
+
+
+
+
+

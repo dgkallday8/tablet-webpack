@@ -1,0 +1,19 @@
+@import 'vars';
+@mixin flexAllCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin widthHeightLeft($w, $h) {
+  width: $w;
+  height: $h;
+  left: calcCenter($w);
+}
+@mixin wh($percent) {
+  width: $percent;
+  height: $percent;
+}
+@function calcCenter($width) {
+  @return unquote('calc(50% - ' + ($width / 2) + ')')
+}
+

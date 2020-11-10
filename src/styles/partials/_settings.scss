@@ -1,0 +1,7 @@
+@import 'mixsfuncs';
+
+
+.settings {
+  @include flexAllCenter();
+  @include wh(100%);
+}

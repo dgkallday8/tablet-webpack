@@ -1,0 +1,48 @@
+@import 'mixsfuncs';
+@import 'vars';
+.rate {
+  @include flexAllCenter();
+  @include wh(100%);
+
+  .rate-block {
+    @include wh(80%);
+    background: $background-display;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 5%;
+  }
+  .valute {
+    display: flex;
+    padding: 5%;
+    background: lighten($background-display, 15%);
+    transition: all 1s ease-in-out;
+
+    &:hover {
+      background: white;
+    }
+    p:first-child {
+      flex: 2;
+      align-items: center;
+      //margin-left: 10%;
+    }
+    p:nth-child(2) {
+      flex: 3;
+      text-align: center;
+      align-items: center;
+    }
+    p:last-child {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    @media screen and (max-width: 600px){
+      font-size: 15px;
+    }
+    @media screen and (max-width: 420px){
+      font-size: 10px;
+    }
+  }
+}
