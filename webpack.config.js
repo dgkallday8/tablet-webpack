@@ -57,7 +57,8 @@ module.exports = {
         port: 3000,
         hot: isDev
     },
-    devtool: isDev ? 'source-map' : 'eval',
+    devtool: isDev ? 'source-map' : false,
+    target: process.env.NODE_ENV === 'development' ? 'web' : 'browserslist',
     plugins: [
         new HTMLWebpackPlugin({
             template: './index.html',
