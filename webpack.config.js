@@ -8,7 +8,6 @@ const TerserWebpackPlugin = require('terser-webpack-plugin')
 
 const isDev = process.env.NODE_ENV ==='development'
 const isProd = !isDev
-console.log("IS DEV такой: ", isDev)
 
 const optimization = () => {
     const config = {
@@ -55,7 +54,9 @@ module.exports = {
     optimization: optimization(),
     devServer: {
         port: 3000,
-        hot: isDev
+        hot: isDev,
+        open: isDev,
+        watchContentBase: isDev
     },
     devtool: isDev ? 'source-map' : false,
     target: process.env.NODE_ENV === 'development' ? 'web' : 'browserslist',

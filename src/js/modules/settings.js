@@ -8,7 +8,7 @@ function settings() {
     backBtn.style.display = 'block'
     return `
         <div id="settings" class="settings display-size">
-            <form action="#" name="form">
+            <form action="#" name="form" class="setting_form">
                 <fieldset class="setBack">
                     <p>Фон</p>
                     <div>

@@ -5,3 +5,24 @@
   @include flexAllCenter();
   @include wh(100%);
 }
+
+.setting_form {
+  height: 50%;
+  background: $background-display;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80%;
+
+
+  fieldset {
+    border: none;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+}
